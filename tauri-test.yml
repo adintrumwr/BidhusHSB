@@ -8,10 +8,6 @@ on:
       - "apps/desktop/**"
       - ".github/workflows/tauri**"
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
-
 env:
   CARGO_TERM_COLOR: always
 
